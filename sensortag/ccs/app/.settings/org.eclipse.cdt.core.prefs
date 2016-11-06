@@ -1,0 +1,17 @@
+eclipse.preferences.version=1
+environment/project/com.ti.ccstudio.buildDefinitions.TMS470.Default.1401462585.755764661/CCS_JAVA_HOME/delimiter=\:
+environment/project/com.ti.ccstudio.buildDefinitions.TMS470.Default.1401462585.755764661/CCS_JAVA_HOME/operation=replace
+environment/project/com.ti.ccstudio.buildDefinitions.TMS470.Default.1401462585.755764661/CCS_JAVA_HOME/value=/usr/lib/jvm/java-8-openjdk
+environment/project/com.ti.ccstudio.buildDefinitions.TMS470.Default.1401462585.755764661/XDCTOOLS_JAVA_HOME/delimiter=\:
+environment/project/com.ti.ccstudio.buildDefinitions.TMS470.Default.1401462585.755764661/XDCTOOLS_JAVA_HOME/operation=replace
+environment/project/com.ti.ccstudio.buildDefinitions.TMS470.Default.1401462585.755764661/XDCTOOLS_JAVA_HOME/value=/usr/lib/jvm/java-8-openjdk
+environment/project/com.ti.ccstudio.buildDefinitions.TMS470.Default.1401462585.755764661/append=true
+environment/project/com.ti.ccstudio.buildDefinitions.TMS470.Default.1401462585.755764661/appendContributed=true
+environment/project/com.ti.ccstudio.buildDefinitions.TMS470.Default.1401462585/CCS_JAVA_HOME/delimiter=\:
+environment/project/com.ti.ccstudio.buildDefinitions.TMS470.Default.1401462585/CCS_JAVA_HOME/operation=replace
+environment/project/com.ti.ccstudio.buildDefinitions.TMS470.Default.1401462585/CCS_JAVA_HOME/value=/usr/lib/jvm/java-8-openjdk
+environment/project/com.ti.ccstudio.buildDefinitions.TMS470.Default.1401462585/XDCTOOLS_JAVA_HOME/delimiter=\:
+environment/project/com.ti.ccstudio.buildDefinitions.TMS470.Default.1401462585/XDCTOOLS_JAVA_HOME/operation=replace
+environment/project/com.ti.ccstudio.buildDefinitions.TMS470.Default.1401462585/XDCTOOLS_JAVA_HOME/value=/usr/lib/jvm/java-8-openjdk
+environment/project/com.ti.ccstudio.buildDefinitions.TMS470.Default.1401462585/append=true
+environment/project/com.ti.ccstudio.buildDefinitions.TMS470.Default.1401462585/appendContributed=true

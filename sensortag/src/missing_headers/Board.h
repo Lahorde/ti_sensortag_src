@@ -1,0 +1,1 @@
+/home/remi/Projects/cc2650/sensortag_ble_sdk_2_02_00_31/sensortag/src/target/board.h

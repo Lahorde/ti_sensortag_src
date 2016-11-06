@@ -1,0 +1,2 @@
+/home/data/remi/dev_tools/Embedded/TI/ccsv6_install/xdctools_3_32_00_06_core/xs.x86_64U: error: can't create session manager: can't find a JVM; the environment variable 'XDCTOOLS_JAVA_HOME' is set, but does not appear to be a directory containing a 64-bit Java Runtime Environment (1.7 or greater); e.g., '/usr/lib/jvm/java-7-openjdk-amd64'.
+gmake: *** No rule to make target `package.mak', needed by `.interfaces'.  Stop.
