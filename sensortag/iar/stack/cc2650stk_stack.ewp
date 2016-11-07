@@ -1,5 +1,4 @@
-<?xml version="1.0" encoding="iso-8859-1"?>
-
+<?xml version='1.0' encoding='iso-8859-1'?>
 <project>
   <fileVersion>2</fileVersion>
   <configuration>
@@ -77,7 +76,7 @@
         </option>
         <option>
           <name>OGLastSavedByProductVersion</name>
-          <state>7.50.3.10745</state>
+          <state>7.70.2.11707</state>
         </option>
         <option>
           <name>GeneralEnableMisra</name>
@@ -127,7 +126,7 @@
         </option>
         <option>
           <name>GBECoreSlave</name>
-          <version>22</version>
+          <version>24</version>
           <state>38</state>
         </option>
         <option>
@@ -144,7 +143,7 @@
         </option>
         <option>
           <name>CoreVariant</name>
-          <version>22</version>
+          <version>24</version>
           <state>38</state>
         </option>
         <option>
@@ -167,7 +166,7 @@
         </option>
         <option>
           <name>GFPUCoreSlave2</name>
-          <version>22</version>
+          <version>24</version>
           <state>38</state>
         </option>
       </data>
@@ -181,27 +180,27 @@
         <debug>1</debug>
         <option>
           <name>CCDefines</name>
-          <state>USE_ICALL</state>
-          <state>OSAL_MAX_NUM_PROXY_TASKS=8</state>
+          <state>CC26XX</state>
+          <state>CC26XXWARE</state>
+          <state>DATA=</state>
+          <state>EXT_HAL_ASSERT</state>
           <state>FLASH_ROM_BUILD</state>
-          <state>POWER_SAVING</state>
           <state>GATT_NO_CLIENT</state>
-          <state>OSAL_SNV=1</state>
-          <state>xNO_BLE_SECURITY</state>
           <state>INCLUDE_AES_DECRYPT</state>
+          <state>NEAR_FUNC=</state>
+          <state>OSAL_CBTIMER_NUM_TASKS=1</state>
+          <state>OSAL_MAX_NUM_PROXY_TASKS=8</state>
+          <state>OSAL_SNV=1</state>
+          <state>POWER_SAVING</state>
+          <state>USE_ICALL</state>
+          <state>xDEBUG</state>
+          <state>xDEBUG_ENC</state>
+          <state>xDEBUG_GPIO</state>
+          <state>xDEBUG_SW_TRACE</state>
+          <state>xNO_BLE_SECURITY</state>
           <state>xPM_DISABLE_PWRDOWN</state>
           <state>xTESTMODES</state>
           <state>xTEST_BLEBOARD</state>
-          <state>OSAL_CBTIMER_NUM_TASKS=1</state>
-          <state>xDEBUG</state>
-          <state>EXT_HAL_ASSERT</state>
-          <state>xDEBUG_GPIO</state>
-          <state>xDEBUG_ENC</state>
-          <state>xDEBUG_SW_TRACE</state>
-          <state>NEAR_FUNC=</state>
-          <state>DATA=</state>
-          <state>CC26XXWARE</state>
-          <state>CC26XX</state>
         </option>
         <option>
           <name>CCPreprocFile</name>
@@ -241,19 +240,19 @@
         </option>
         <option>
           <name>CCDiagSuppress</name>
-          <state></state>
+          <state/>
         </option>
         <option>
           <name>CCDiagRemark</name>
-          <state></state>
+          <state/>
         </option>
         <option>
           <name>CCDiagWarning</name>
-          <state></state>
+          <state/>
         </option>
         <option>
           <name>CCDiagError</name>
-          <state></state>
+          <state/>
         </option>
         <option>
           <name>CCObjPrefix</name>
@@ -324,7 +323,7 @@
         </option>
         <option>
           <name>PreInclude</name>
-          <state></state>
+          <state/>
         </option>
         <option>
           <name>CompilerMisraOverride</name>
@@ -335,6 +334,7 @@
           <state>$SRC_BLE_CORE$/controller/cc26xx/cm0_patch</state>
           <state>$SRC_BLE_CORE$/controller/cc26xx/inc</state>
           <state>$SRC_BLE_CORE$/inc</state>
+          <state>$SRC_BLE_CORE$/rom</state>
           <state>$SRC_EX$/common/cc26xx</state>
           <state>$SRC_EX$/common/cc26xx/npi/stack</state>
           <state>$SRC_EX$/examples/sensortag/cc26xx/stack</state>
@@ -498,15 +498,15 @@
         </option>
         <option>
           <name>AWarnOne</name>
-          <state></state>
+          <state/>
         </option>
         <option>
           <name>AWarnRange1</name>
-          <state></state>
+          <state/>
         </option>
         <option>
           <name>AWarnRange2</name>
-          <state></state>
+          <state/>
         </option>
         <option>
           <name>ADebug</name>
@@ -518,7 +518,7 @@
         </option>
         <option>
           <name>ADefines</name>
-          <state></state>
+          <state/>
         </option>
         <option>
           <name>AList</name>
@@ -614,7 +614,7 @@
         </option>
         <option>
           <name>AUserIncludes</name>
-          <state></state>
+          <state/>
         </option>
         <option>
           <name>AExtraOptionsCheckV2</name>
@@ -622,7 +622,7 @@
         </option>
         <option>
           <name>AExtraOptionsV2</name>
-          <state></state>
+          <state/>
         </option>
         <option>
           <name>AsmNoLiteralPool</name>
@@ -664,8 +664,8 @@
       <name>CUSTOM</name>
       <archiveVersion>3</archiveVersion>
       <data>
-        <extensions></extensions>
-        <cmdline></cmdline>
+        <extensions/>
+        <cmdline/>
         <hasPrio>0</hasPrio>
       </data>
     </settings>
@@ -711,27 +711,27 @@
         </option>
         <option>
           <name>IlinkKeepSymbols</name>
-          <state></state>
+          <state/>
         </option>
         <option>
           <name>IlinkRawBinaryFile</name>
-          <state></state>
+          <state/>
         </option>
         <option>
           <name>IlinkRawBinarySymbol</name>
-          <state></state>
+          <state/>
         </option>
         <option>
           <name>IlinkRawBinarySegment</name>
-          <state></state>
+          <state/>
         </option>
         <option>
           <name>IlinkRawBinaryAlign</name>
-          <state></state>
+          <state/>
         </option>
         <option>
           <name>IlinkDefines</name>
-          <state></state>
+          <state/>
         </option>
         <option>
           <name>IlinkConfigDefines</name>
@@ -772,7 +772,7 @@
         </option>
         <option>
           <name>IlinkIcfFileSlave</name>
-          <state></state>
+          <state/>
         </option>
         <option>
           <name>IlinkEnableRemarks</name>
@@ -780,19 +780,19 @@
         </option>
         <option>
           <name>IlinkSuppressDiags</name>
-          <state></state>
+          <state/>
         </option>
         <option>
           <name>IlinkTreatAsRem</name>
-          <state></state>
+          <state/>
         </option>
         <option>
           <name>IlinkTreatAsWarn</name>
-          <state></state>
+          <state/>
         </option>
         <option>
           <name>IlinkTreatAsErr</name>
-          <state></state>
+          <state/>
         </option>
         <option>
           <name>IlinkWarningsAreErrors</name>
@@ -818,7 +818,6 @@
           <name>IlinkAdditionalLibs</name>
           <state>$ROM$/ble_rom_releases/04242014/ble_rom_patch.symbols</state>
           <state>$CC26XXWARE$\driverlib\bin\iar\driverlib.lib</state>
-          <state>$SRC_BLE_CORE$/rom/enc_lib/cc26xx_ecc_rom_api.a</state>
         </option>
         <option>
           <name>IlinkOverrideProgramEntryLabel</name>
@@ -953,11 +952,11 @@
         </option>
         <option>
           <name>IlinkStackControlFile</name>
-          <state></state>
+          <state/>
         </option>
         <option>
           <name>IlinkStackCallGraphFile</name>
-          <state></state>
+          <state/>
         </option>
         <option>
           <name>CrcAlgorithm</name>
@@ -988,7 +987,7 @@
         <debug>1</debug>
         <option>
           <name>IarchiveInputs</name>
-          <state></state>
+          <state/>
         </option>
         <option>
           <name>IarchiveOverride</name>
@@ -1203,14 +1202,14 @@
     <file>
       <name>$SRC_BLE_CORE$\host\gattservapp_util.c</name>
     </file>
+    <file>
+      <name>$SRC_BLE_CORE$\host\sm_ecc.c</name>
+    </file>
   </group>
   <group>
     <name>Startup</name>
     <file>
       <name>$SRC_EX$\icall\stack\ble_user_config.c</name>
-    </file>
-    <file>
-      <name>$SRC_BLE_CORE$\rom\common_rom_init.c</name>
     </file>
     <file>
       <name>$SRC_EX$\common\cc26xx\icall_startup.c</name>
@@ -1219,7 +1218,7 @@
       <name>$SRC_EX$\examples\sensortag\cc26xx\stack\osal_icall_ble.c</name>
     </file>
     <file>
-      <name>$SRC_BLE_CORE$\rom\rom_init.c</name>
+      <name>$SRC_BLE_CORE$\rom\rom_jt.c</name>
     </file>
   </group>
   <group>
@@ -1241,5 +1240,3 @@
     </file>
   </group>
 </project>
-
-

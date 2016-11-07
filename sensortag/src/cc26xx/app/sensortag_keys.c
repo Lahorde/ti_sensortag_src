@@ -42,8 +42,8 @@
  EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
  ******************************************************************************
- Release Name: ble_sdk_2_02_00_31
- Release Date: 2016-06-16 18:57:29
+ Release Name: ble_sdk_2_02_01_18
+ Release Date: 2016-10-26 15:20:04
  *****************************************************************************/
 
 #ifndef EXCLUDE_KEYS
@@ -57,7 +57,7 @@
 #include "sensortag_io.h"
 #include "ioservice.h"
 #include "sensortag_factoryreset.h"
-#include "Board.h"
+#include "board.h"
 #include "peripheral.h"
 #include "simplekeys.h"
 #include "sensortag_audio.h"
@@ -268,6 +268,17 @@ void SensorTagKeys_processEvent(void)
   {
     SK_SetParameter(SK_KEY_ATTR, sizeof(uint8_t), &keys);
 
+    // Have keys been released?
+    if ((current_keys & SK_KEY_LEFT)!=0 && (keys & SK_KEY_LEFT)==0)
+    {
+        keyLeftTimer = 0;
+    }
+
+    if ((current_keys & SK_KEY_RIGHT)!=0 && (keys & SK_KEY_RIGHT)==0)
+    {
+        keyRightTimer = 0;
+    }
+
     // Insert key state into advertising data
     if (gapProfileState == GAPROLE_ADVERTISING)
     {
@@ -348,18 +359,10 @@ static void SensorTagKeys_clockHandler(UArg arg)
     {
         keyRightTimer++;
     }
-    else
-    {
-        keyRightTimer = 0;
-    }
 
     if (keys & SK_KEY_LEFT)
     {
         keyLeftTimer++;
-    }
-    else
-    {
-        keyLeftTimer = 0;
     }
 
     // Both keys have been pressed for 6 seconds -> restore factory image

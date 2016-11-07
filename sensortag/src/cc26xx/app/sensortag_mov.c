@@ -43,8 +43,8 @@
  EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
  ******************************************************************************
- Release Name: ble_sdk_2_02_00_31
- Release Date: 2016-06-16 18:57:29
+ Release Name: ble_sdk_2_02_01_18
+ Release Date: 2016-10-26 15:20:04
  *****************************************************************************/
 
 #ifndef EXCLUDE_MOV
@@ -69,7 +69,8 @@
 /*********************************************************************
  * MACROS
  */
-#define MOVEMENT_INACT_CYCLES   (MOVEMENT_INACT_TIMEOUT * (1000/sensorPeriod))
+#define MOVEMENT_INACT_CYCLES   (MOVEMENT_INACT_TIMEOUT * \
+                                (10000/sensorPeriod) / 10)
 
 /*********************************************************************
  * CONSTANTS and MACROS
@@ -289,6 +290,7 @@ void SensorTagMov_processSensorEvent(void)
             SensorMpu9250_enable(axes);
           }
         }
+
         if (mpuConfig & MOV_WOM_ENABLE)
         {
           nActivity--;

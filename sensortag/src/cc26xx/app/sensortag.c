@@ -40,8 +40,8 @@
  EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
  ******************************************************************************
- Release Name: ble_sdk_2_02_00_31
- Release Date: 2016-06-16 18:57:29
+ Release Name: ble_sdk_2_02_01_18
+ Release Date: 2016-10-26 15:20:04
  *****************************************************************************/
 
 /*******************************************************************************
@@ -57,7 +57,7 @@
 #include <ti/sysbios/knl/Queue.h>
 #include <ti/sysbios/knl/Task.h>
 
-#include <icall.h>
+#include <ICall.h>
 
 #include "gatt.h"
 #include "hci.h"
@@ -71,7 +71,7 @@
 #include "SensorI2C.h"
 #include "SensorTagTest.h"
 #include "sensortag_revision.h"
-#include "board.h"
+#include "Board.h"
 #include "SensorUtil.h"
 #include "devinfoservice.h"
 #include "movementservice.h"
@@ -131,7 +131,7 @@
 
 // Whether to enable automatic parameter update request when a
 // connection is formed
-#define DEFAULT_ENABLE_UPDATE_REQUEST         FALSE
+#define DEFAULT_ENABLE_UPDATE_REQUEST         GAPROLE_LINK_PARAM_UPDATE_WAIT_BOTH_PARAMS
 
 // Connection Pause Peripheral time value (in seconds)
 #define DEFAULT_CONN_PAUSE_PERIPHERAL         1
@@ -225,7 +225,11 @@ static uint8_t scanRspData[] =
   // complete name
   0x11,   // length of this data
   GAP_ADTYPE_LOCAL_NAME_COMPLETE,
+#ifdef CC1350STK
+  'C', 'C', '1', '3', '5', '0', ' ',
+#else
   'C', 'C', '2', '6', '5', '0', ' ',
+#endif
   'S', 'e', 'n',  's',  'o',  'r',  'T',  'a',  'g',
 
   // connection interval range
@@ -275,15 +279,19 @@ static uint8_t advertData[] =
   0x00                                    // Key state
 };
 
-// GAP GATT Attributes
-static const uint8_t attDeviceName[GAP_DEVICE_NAME_LEN] = "SensorTag 2.0";
-
 // Device information parameters
+#ifdef CC1350STK
+static const uint8_t devInfoModelNumber[] = "CC1350 SensorTag";
+#else
 static const uint8_t devInfoModelNumber[] = "CC2650 SensorTag";
+#endif
 static const uint8_t devInfoNA[] =          "N.A.";
 static const uint8_t devInfoFirmwareRev[] = FW_VERSION_STR;
 static const uint8_t devInfoMfrName[] =     "Texas Instruments";
-static const uint8_t devInfoHardwareRev[] = "PCB 1.2/1.3";
+static const uint8_t *devInfoHardwareRev =  devInfoNA;
+
+// GAP GATT Attributes
+static const uint8_t *attDeviceName = devInfoModelNumber;
 
 // Pins that are actively used by the application
 static PIN_Config SensortagAppPinTable[] =
@@ -497,8 +505,13 @@ static void SensorTag_init(void)
 
   if (selfTestMap == ST_TEST_MAP)
   {
+#ifdef IOID_GREEN_LED
     // Blink green LED
     SensorTagIO_blinkLed(IOID_GREEN_LED, TEST_INDICATION_BLINKS);
+#else
+    // Blink red LED
+    SensorTagIO_blinkLed(IOID_RED_LED, TEST_INDICATION_BLINKS);
+#endif
   }
   else
   {
@@ -629,7 +642,11 @@ static void SensorTag_taskFxn(UArg a0, UArg a1)
       // Blink green LED when advertising
       if (gapProfileState == GAPROLE_ADVERTISING)
       {
+#ifdef IOID_GREEN_LED
         SensorTagIO_blinkLed(IOID_GREEN_LED, 1);
+#else
+        SensorTagIO_blinkLed(IOID_RED_LED, 1);
+#endif
         #ifdef INCLUDE_DISPLAY
         SensorTagDisplay_showBatteryLevel();
         #endif
@@ -729,9 +746,9 @@ static void SensorTag_processStateChangeEvt(gaprole_States_t newState)
     {
       uint8_t ownAddress[B_ADDR_LEN];
       uint8_t systemId[DEVINFO_SYSTEM_ID_LEN];
-
+#ifdef IOID_GREEN_LED
       SensorTagIO_blinkLed(IOID_GREEN_LED, 5);
-
+#endif
       GAPRole_GetParameter(GAPROLE_BD_ADDR, ownAddress);
 
       // use 6 bytes of device address for 8 bytes of system ID value

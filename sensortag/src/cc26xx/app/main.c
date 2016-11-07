@@ -40,8 +40,8 @@
  EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
  ******************************************************************************
- Release Name: ble_sdk_2_02_00_31
- Release Date: 2016-06-16 18:57:29
+ Release Name: ble_sdk_2_02_01_18
+ Release Date: 2016-10-26 15:20:04
  *****************************************************************************/
 
 // TI RTOS
@@ -176,7 +176,26 @@ int main()
  * @fn          AssertHandler
  *
  * @brief       This is the Application's callback handler for asserts raised
- *              in the stack.
+ *              in the stack.  When EXT_HAL_ASSERT is defined in the Stack
+ *              project this function will be called when an assert is raised, 
+ *              and can be used to observe or trap a violation from expected 
+ *              behavior.       
+ *              
+ *              As an example, for Heap allocation failures the Stack will raise 
+ *              HAL_ASSERT_CAUSE_OUT_OF_MEMORY as the assertCause and 
+ *              HAL_ASSERT_SUBCAUSE_NONE as the assertSubcause.  An application
+ *              developer could trap any malloc failure on the stack by calling
+ *              HAL_ASSERT_SPINLOCK under the matching case.
+ *
+ *              An application developer is encouraged to extend this function
+ *              for use by their own application.  To do this, add hal_assert.c
+ *              to your project workspace, the path to hal_assert.h (this can 
+ *              be found on the stack side). Asserts are raised by including
+ *              hal_assert.h and using macro HAL_ASSERT(cause) to raise an 
+ *              assert with argument assertCause.  the assertSubcause may be
+ *              optionally set by macro HAL_ASSERT_SET_SUBCAUSE(subCause) prior
+ *              to asserting the cause it describes. More information is
+ *              available in hal_assert.h.
  *
  * input parameters
  *

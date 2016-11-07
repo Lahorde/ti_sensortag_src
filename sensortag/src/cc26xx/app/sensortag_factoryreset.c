@@ -40,8 +40,8 @@
  EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
  *******************************************************************************
- Release Name: ble_sdk_2_02_00_31
- Release Date: 2016-06-16 18:57:29
+ Release Name: ble_sdk_2_02_01_18
+ Release Date: 2016-10-26 15:20:04
  ******************************************************************************/
 #ifndef EXCLUDE_FACTORY_RESET
 
@@ -104,8 +104,9 @@ void SensorTagFactoryReset_applyFactoryImage(void)
     if (SensorTagFactoryReset_hasImage())
     {
         // Indicate that factory image is launched
+#ifdef IOID_GREEN_LED
         PIN_setOutputValue(hGpioPin, IOID_GREEN_LED, Board_LED_ON);
-
+#endif
         // Load and launch factory image; page 0 and 31 must be omitted
         ((void (*)(uint32_t, uint32_t, uint32_t))BL_OFFSET)
             (EFL_ADDR_RECOVERY + APP_START, // Location in external flash
@@ -150,12 +151,14 @@ bool SensorTagFactoryReset_storeCurrentImage(void)
         // LED on
         if (ledToggle)
         {
+#ifdef IOID_GREEN_LED
             PIN_setOutputValue(hGpioPin, IOID_GREEN_LED, Board_LED_ON);
+#endif
             PIN_setOutputValue(hGpioPin, IOID_RED_LED, Board_LED_OFF);
         }
 
         // Erase the page
-        ExtFlash_erase(address,EFL_PAGE_SIZE);
+        ExtFlash_erase(EFL_ADDR_RECOVERY + address, EFL_PAGE_SIZE);
 
         for (offset=0; offset<EFL_PAGE_SIZE && success; offset+=sizeof(buf))
         {
@@ -164,8 +167,8 @@ bool SensorTagFactoryReset_storeCurrentImage(void)
 
             // Copy from internal to external flash
             pIntFlash = (const uint8_t*)address + offset;
-            memcpy(buf,pIntFlash,sizeof(buf));
-            success = ExtFlash_write(EFL_ADDR_RECOVERY+address+offset,
+            memcpy(buf, pIntFlash, sizeof(buf));
+            success = ExtFlash_write(EFL_ADDR_RECOVERY + address + offset,
                                     sizeof(buf), buf);
 
             if (success)
@@ -181,7 +184,9 @@ bool SensorTagFactoryReset_storeCurrentImage(void)
         // LED off
         if (ledToggle)
         {
+#ifdef IOID_GREEN_LED
             PIN_setOutputValue(hGpioPin, IOID_GREEN_LED, Board_LED_OFF);
+#endif
             PIN_setOutputValue(hGpioPin, IOID_RED_LED, Board_LED_ON);
         }
     }
@@ -340,7 +345,9 @@ void SensorTagFactoryReset_extFlashErase(void)
             // LED on
             if (ledToggle)
             {
+#ifdef IOID_GREEN_LED
                 PIN_setOutputValue(hGpioPin, IOID_GREEN_LED, Board_LED_ON);
+#endif
                 PIN_setOutputValue(hGpioPin, IOID_RED_LED, Board_LED_OFF);
             }
 
@@ -351,7 +358,9 @@ void SensorTagFactoryReset_extFlashErase(void)
             if (ledToggle)
             {
                 PIN_setOutputValue(hGpioPin, IOID_RED_LED, Board_LED_ON);
+#ifdef IOID_GREEN_LED
                 PIN_setOutputValue(hGpioPin, IOID_GREEN_LED, Board_LED_OFF);
+#endif
             }
         }
         PIN_setOutputValue(hGpioPin, IOID_RED_LED, Board_LED_OFF);
@@ -362,7 +371,7 @@ void SensorTagFactoryReset_extFlashErase(void)
     SensorTagDisplay_resume();
 }
 
-/*********************************************************************
+/*******************************************************************************
  * @fn          crc16
  *
  * @brief       Run the CRC16 Polynomial calculation over the byte parameter.

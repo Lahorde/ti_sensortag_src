@@ -40,8 +40,8 @@
  EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
  ******************************************************************************
- Release Name: ble_sdk_2_02_00_31
- Release Date: 2016-06-16 18:57:29
+ Release Name: ble_sdk_2_02_01_18
+ Release Date: 2016-10-26 15:20:04
  *****************************************************************************/
 
 #ifndef EXCLUDE_OAD
@@ -50,7 +50,7 @@
  */
 #include "bcomdef.h"
 #include "string.h"
-#include <icall.h>
+#include <ICall.h>
 #include "util.h"
 #include "sensortag.h"
 #include "sensortag_conn_ctrl.h"
@@ -139,7 +139,7 @@ void SensorTagOad_processEvent(void)
 {
     while (!Queue_empty(hOadQ))
     {
-        oadTargetWrite_t *oadWriteEvt = Queue_dequeue(hOadQ);
+        oadTargetWrite_t *oadWriteEvt = Queue_get(hOadQ);
 
         // Identify new image.
         if (oadWriteEvt->event == OAD_WRITE_IDENTIFY_REQ)
@@ -190,7 +190,7 @@ static void SensorTag_processOadWriteCB(uint8_t event, uint16_t connHandle,
     oadWriteEvt->pData = (uint8_t *)(&oadWriteEvt->pData + 1);
     memcpy(oadWriteEvt->pData, pData, OAD_PACKET_SIZE);
 
-    Queue_enqueue(hOadQ, (Queue_Elem *)oadWriteEvt);
+    Queue_put(hOadQ, (Queue_Elem *)oadWriteEvt);
 
     // Post the application's semaphore.
     Semaphore_post(sem);

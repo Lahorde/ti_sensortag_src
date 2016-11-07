@@ -76,7 +76,7 @@
         </option>
         <option>
           <name>OGLastSavedByProductVersion</name>
-          <state>7.50.3.10745</state>
+          <state>7.70.2.11707</state>
         </option>
         <option>
           <name>GeneralEnableMisra</name>
@@ -126,7 +126,7 @@
         </option>
         <option>
           <name>GBECoreSlave</name>
-          <version>22</version>
+          <version>24</version>
           <state>38</state>
         </option>
         <option>
@@ -143,7 +143,7 @@
         </option>
         <option>
           <name>CoreVariant</name>
-          <version>22</version>
+          <version>24</version>
           <state>38</state>
         </option>
         <option>
@@ -166,7 +166,7 @@
         </option>
         <option>
           <name>GFPUCoreSlave2</name>
-          <version>22</version>
+          <version>24</version>
           <state>38</state>
         </option>
       </data>
@@ -181,19 +181,19 @@
         <option>
           <name>CCDefines</name>
           <state>CC2650STK</state>
-          <state>FEATURE_OAD</state>
-          <state>EXCLUDE_AUDIO</state>
-          <state>POWER_SAVING</state>
-          <state>GATT_TI_UUID_128_BIT</state>
-          <state>USE_ICALL</state>
-          <state>FACTORY_IMAGE</state>
           <state>CC26XX</state>
+          <state>Display_DISABLE_ALL</state>
+          <state>EXCLUDE_AUDIO</state>
+          <state>FACTORY_IMAGE</state>
+          <state>FEATURE_OAD</state>
+          <state>GATT_TI_UUID_128_BIT</state>
           <state>HEAPMGR_SIZE=0</state>
-          <state>ICALL_MAX_NUM_TASKS=8</state>
           <state>ICALL_MAX_NUM_ENTITIES=11</state>
+          <state>ICALL_MAX_NUM_TASKS=8</state>
+          <state>POWER_SAVING</state>
+          <state>USE_ICALL</state>
           <state>xdc_runtime_Assert_DISABLE_ALL</state>
           <state>xdc_runtime_Log_DISABLE_ALL</state>
-          <state>Display_DISABLE_ALL</state>
         </option>
         <option>
           <name>CCPreprocFile</name>
@@ -1131,7 +1131,7 @@
         </option>
         <option>
           <name>GBECoreSlave</name>
-          <version>22</version>
+          <version>24</version>
           <state>38</state>
         </option>
         <option>
@@ -1148,7 +1148,7 @@
         </option>
         <option>
           <name>CoreVariant</name>
-          <version>22</version>
+          <version>24</version>
           <state>38</state>
         </option>
         <option>
@@ -1171,7 +1171,7 @@
         </option>
         <option>
           <name>GFPUCoreSlave2</name>
-          <version>22</version>
+          <version>24</version>
           <state>38</state>
         </option>
       </data>
@@ -1186,19 +1186,19 @@
         <option>
           <name>CCDefines</name>
           <state>CC2650STK</state>
-          <state>EXCLUDE_OAD</state>
+          <state>CC26XX</state>
+          <state>Display_DISABLE_ALL</state>
           <state>EXCLUDE_AUDIO</state>
           <state>EXCLUDE_FACTORY_RESET</state>
-          <state>USE_ICALL</state>
-          <state>POWER_SAVING</state>
+          <state>EXCLUDE_OAD</state>
           <state>GATT_TI_UUID_128_BIT</state>
           <state>HEAPMGR_SIZE=0</state>
-          <state>ICALL_MAX_NUM_TASKS=8</state>
           <state>ICALL_MAX_NUM_ENTITIES=11</state>
-          <state>CC26XX</state>
+          <state>ICALL_MAX_NUM_TASKS=8</state>
+          <state>POWER_SAVING</state>
+          <state>USE_ICALL</state>
           <state>xdc_runtime_Assert_DISABLE_ALL</state>
           <state>xdc_runtime_Log_DISABLE_ALL</state>
-          <state>Display_DISABLE_ALL</state>
         </option>
         <option>
           <name>CCPreprocFile</name>
@@ -2148,10 +2148,10 @@
     <group>
       <name>RF</name>
       <file>
-        <name>$TI_RTOS_DRIVERS_BASE$\ti\drivers\rf\RF.c</name>
+        <name>$TI_RTOS_DRIVERS_BASE$\ti\drivers\rf\RF.h</name>
       </file>
       <file>
-        <name>$TI_RTOS_DRIVERS_BASE$\ti\drivers\rf\RF.h</name>
+        <name>$TI_RTOS_DRIVERS_BASE$\ti\drivers\rf\RFCC26XX_singleMode.c</name>
       </file>
     </group>
     <group>
@@ -2167,6 +2167,15 @@
       </file>
       <file>
         <name>$TI_RTOS_DRIVERS_BASE$\ti\drivers\spi\SPICC26XXDMA.h</name>
+      </file>
+    </group>
+    <group>
+      <name>TRNG</name>
+      <file>
+        <name>$SRC_COMMON$\hal\src\target\_common\TRNGCC26XX.c</name>
+      </file>
+      <file>
+        <name>$SRC_COMMON$\hal\src\target\_common\TRNGCC26XX.h</name>
       </file>
     </group>
     <group>

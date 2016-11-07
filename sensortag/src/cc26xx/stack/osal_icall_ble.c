@@ -40,8 +40,8 @@
  EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
  ******************************************************************************
- Release Name: ble_sdk_2_02_00_31
- Release Date: 2016-06-16 18:57:29
+ Release Name: ble_sdk_2_02_01_18
+ Release Date: 2016-10-26 15:20:04
  *****************************************************************************/
 
 /**************************************************************************************************
@@ -208,11 +208,9 @@ int stack_main( void *arg )
     ICall_abort();
   }
 
+  // Disable interrupts
   halIntState_t state;
   HAL_ENTER_CRITICAL_SECTION(state);
-  
-  // Turn off interrupts
-  //osal_int_disable( INTS_ALL );
 
   // Initialize NV System
   osal_snv_init( );
@@ -221,7 +219,6 @@ int stack_main( void *arg )
   osal_init_system();
 
   // Allow interrupts
-  //osal_int_enable( INTS_ALL );
   HAL_EXIT_CRITICAL_SECTION(state);
 
   osal_start_system(); // No Return from here

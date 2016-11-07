@@ -41,8 +41,8 @@
  EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
  ******************************************************************************
- Release Name: ble_sdk_2_02_00_31
- Release Date: 2016-06-16 18:57:29
+ Release Name: ble_sdk_2_02_01_18
+ Release Date: 2016-10-26 15:20:04
  *****************************************************************************/
 
 #ifndef SENSORTAG_H
@@ -56,7 +56,7 @@ extern "C"
 /*********************************************************************
  * INCLUDES
  */
-#include "icall.h"
+#include "ICall.h"
 #include "peripheral.h"
 #include <ti/sysbios/knl/Clock.h>
 #include <ti/drivers/PIN.h>

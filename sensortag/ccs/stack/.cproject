@@ -12,7 +12,7 @@
 				</extensions>
 			</storageModule>
 			<storageModule moduleId="cdtBuildSystem" version="4.0.0">
-				<configuration artifactExtension="out" artifactName="${ProjName}" buildProperties="" cleanCommand="${CG_CLEAN_CMD}" description="" id="com.ti.ccstudio.buildDefinitions.TMS470.Default.1739398234" name="FlashROM" parent="com.ti.ccstudio.buildDefinitions.TMS470.Default" postbuildStep="${CG_TOOL_HEX} -order MS --memwidth=8 --romwidth=8 --intel -o ${ProjName}.hex ${ProjName}.out;export WINEPREFIX=/home/remi/.wine_installs/win64  &amp;&amp; export WINEARCH=win64 &amp;&amp; wine ${TOOLS_BLE}/frontier/frontier.exe ccs ${PROJECT_LOC}/${ConfigName}/${ProjName}_linkInfo.xml ${ORG_PROJ_DIR}/../config/ccs_compiler_defines.bcfg ${ORG_PROJ_DIR}/../config/ccs_linker_defines.cmd;" prebuildStep="python2 ${TOOLS_BLE}/lib_search/src/lib_search.py ${ORG_PROJ_DIR}/build_config.opt &quot;${TOOLS_BLE}/lib_search/params_split_cc2640.xml&quot; ${SRC_BLE_CORE}/../blelib ${ORG_PROJ_DIR}/../config/lib_linker.cmd;">
+				<configuration artifactExtension="out" artifactName="${ProjName}" buildProperties="" cleanCommand="${CG_CLEAN_CMD}" description="" id="com.ti.ccstudio.buildDefinitions.TMS470.Default.1739398234" name="FlashROM" parent="com.ti.ccstudio.buildDefinitions.TMS470.Default" postbuildStep="${CG_TOOL_HEX} -order MS --memwidth=8 --romwidth=8 --intel -o ${ProjName}.hex ${ProjName}.out;export WINEPREFIX=/home/remi/.wine_installs/win64  &amp;&amp; export WINEARCH=win64 &amp;&amp; wine ${TOOLS_BLE}/frontier/frontier.exe ccs ${PROJECT_LOC}/${ConfigName}/${ProjName}_linkInfo.xml ${ORG_PROJ_DIR}/../config/ccs_compiler_defines.bcfg ${ORG_PROJ_DIR}/../config/ccs_linker_defines.cmd;" prebuildStep="python2 ${TOOLS_BLE}/lib_search/src/lib_search.py ${ORG_PROJ_DIR}/build_config.opt &quot;${MODIFIED_TOOLS_BLE}/lib_search/params_split_cc2640.xml&quot; ${SRC_BLE_CORE}/../blelib ${ORG_PROJ_DIR}/../config/lib_linker.cmd;">
 					<folderInfo id="com.ti.ccstudio.buildDefinitions.TMS470.Default.1739398234." name="/" resourcePath="">
 						<toolChain id="com.ti.ccstudio.buildDefinitions.TMS470_5.2.exe.DebugToolchain.1511511774" name="TI Build Tools" superClass="com.ti.ccstudio.buildDefinitions.TMS470_5.2.exe.DebugToolchain" targetTool="com.ti.ccstudio.buildDefinitions.TMS470_5.2.exe.linkerDebug.338291017">
 							<option id="com.ti.ccstudio.buildDefinitions.core.OPT_TAGS.1540770708" superClass="com.ti.ccstudio.buildDefinitions.core.OPT_TAGS" valueType="stringList">
@@ -37,7 +37,7 @@
 								<option id="com.ti.ccstudio.buildDefinitions.TMS470_5.2.compilerID.OPT_FOR_SPEED.1164526369" name="Speed vs. size trade-offs (--opt_for_speed, -mf)" superClass="com.ti.ccstudio.buildDefinitions.TMS470_5.2.compilerID.OPT_FOR_SPEED" value="com.ti.ccstudio.buildDefinitions.TMS470_5.2.compilerID.OPT_FOR_SPEED.0" valueType="enumerated"/>
 								<option id="com.ti.ccstudio.buildDefinitions.TMS470_5.2.compilerID.INCLUDE_PATH.255364528" name="Add dir to #include search path (--include_path, -I)" superClass="com.ti.ccstudio.buildDefinitions.TMS470_5.2.compilerID.INCLUDE_PATH" valueType="includePath">
 									<listOptionValue builtIn="false" value="${CG_TOOL_ROOT}/include"/>
-									<listOptionValue builtIn="false" value="&quot;${PROJECT_LOC}/../../src/missing_headers&quot;"/>
+									<listOptionValue builtIn="false" value="${PROJECT_LOC}/../../src/missing_headers"/>
 									<listOptionValue builtIn="false" value="${SRC_EX}/examples/sensortag/cc26xx/stack"/>
 									<listOptionValue builtIn="false" value="${SRC_EX}/inc"/>
 									<listOptionValue builtIn="false" value="${SRC_EX}/common/cc26xx"/>
@@ -52,6 +52,7 @@
 									<listOptionValue builtIn="false" value="${SRC_COMMON}/services/src/nv"/>
 									<listOptionValue builtIn="false" value="${SRC_COMMON}/icall/src/inc"/>
 									<listOptionValue builtIn="false" value="${SRC_BLE_CORE}/inc"/>
+									<listOptionValue builtIn="false" value="${SRC_BLE_CORE}/rom"/>
 									<listOptionValue builtIn="false" value="${SRC_BLE_CORE}/controller/cc26xx/inc"/>
 									<listOptionValue builtIn="false" value="${SRC_COMMON}/services/src/aes/cc26xx"/>
 									<listOptionValue builtIn="false" value="${SRC_COMMON}/npi/src"/>
@@ -63,26 +64,26 @@
 								<option id="com.ti.ccstudio.buildDefinitions.TMS470_5.2.compilerID.C_DIALECT.1821149000" name="C Dialect" superClass="com.ti.ccstudio.buildDefinitions.TMS470_5.2.compilerID.C_DIALECT" value="com.ti.ccstudio.buildDefinitions.TMS470_5.2.compilerID.C_DIALECT.C99" valueType="enumerated"/>
 								<option id="com.ti.ccstudio.buildDefinitions.TMS470_5.2.compilerID.DEFINE.1514676849" name="Pre-define NAME (--define, -D)" superClass="com.ti.ccstudio.buildDefinitions.TMS470_5.2.compilerID.DEFINE" valueType="definedSymbols">
 									<listOptionValue builtIn="false" value="CC26XX"/>
-									<listOptionValue builtIn="false" value="USE_ICALL"/>
+									<listOptionValue builtIn="false" value="CC26XXWARE"/>
+									<listOptionValue builtIn="false" value="DATA="/>
+									<listOptionValue builtIn="false" value="EXT_HAL_ASSERT"/>
 									<listOptionValue builtIn="false" value="FLASH_ROM_BUILD"/>
-									<listOptionValue builtIn="false" value="POWER_SAVING"/>
 									<listOptionValue builtIn="false" value="GATT_NO_CLIENT"/>
-									<listOptionValue builtIn="false" value="OSAL_SNV=0"/>
 									<listOptionValue builtIn="false" value="INCLUDE_AES_DECRYPT"/>
-									<listOptionValue builtIn="false" value="NO_BLE_SECURITY"/>
+									<listOptionValue builtIn="false" value="NEAR_FUNC="/>
+									<listOptionValue builtIn="false" value="OSAL_CBTIMER_NUM_TASKS=1"/>
+									<listOptionValue builtIn="false" value="OSAL_MAX_NUM_PROXY_TASKS=8"/>
+									<listOptionValue builtIn="false" value="OSAL_SNV=0"/>
+									<listOptionValue builtIn="false" value="POWER_SAVING"/>
+									<listOptionValue builtIn="false" value="USE_ICALL"/>
+									<listOptionValue builtIn="false" value="xDEBUG"/>
+									<listOptionValue builtIn="false" value="xDEBUG_ENC"/>
+									<listOptionValue builtIn="false" value="xDEBUG_GPIO"/>
+									<listOptionValue builtIn="false" value="xDEBUG_SW_TRACE"/>
+									<listOptionValue builtIn="false" value="xNO_BLE_SECURITY"/>
 									<listOptionValue builtIn="false" value="xPM_DISABLE_PWRDOWN"/>
 									<listOptionValue builtIn="false" value="xTESTMODES"/>
 									<listOptionValue builtIn="false" value="xTEST_BLEBOARD"/>
-									<listOptionValue builtIn="false" value="OSAL_CBTIMER_NUM_TASKS=1"/>
-									<listOptionValue builtIn="false" value="xDEBUG"/>
-									<listOptionValue builtIn="false" value="EXT_HAL_ASSERT"/>
-									<listOptionValue builtIn="false" value="xDEBUG_GPIO"/>
-									<listOptionValue builtIn="false" value="xDEBUG_ENC"/>
-									<listOptionValue builtIn="false" value="xDEBUG_SW_TRACE"/>
-									<listOptionValue builtIn="false" value="NEAR_FUNC="/>
-									<listOptionValue builtIn="false" value="DATA="/>
-									<listOptionValue builtIn="false" value="OSAL_MAX_NUM_PROXY_TASKS=8"/>
-									<listOptionValue builtIn="false" value="CC26XXWARE"/>
 								</option>
 								<option id="com.ti.ccstudio.buildDefinitions.TMS470_5.2.compilerID.DIAG_WARNING.1935946343" name="Treat diagnostic &lt;id&gt; as warning (--diag_warning, -pdsw)" superClass="com.ti.ccstudio.buildDefinitions.TMS470_5.2.compilerID.DIAG_WARNING" valueType="stringList">
 									<listOptionValue builtIn="false" value="225"/>
@@ -109,13 +110,9 @@
 								<option id="com.ti.ccstudio.buildDefinitions.TMS470_5.2.linkerID.OUTPUT_FILE.537928282" name="Specify output file name (--output_file, -o)" superClass="com.ti.ccstudio.buildDefinitions.TMS470_5.2.linkerID.OUTPUT_FILE" value="&quot;${ProjName}.out&quot;" valueType="string"/>
 								<option id="com.ti.ccstudio.buildDefinitions.TMS470_5.2.linkerID.LIBRARY.1995334947" name="Include library file or command file as input (--library, -l)" superClass="com.ti.ccstudio.buildDefinitions.TMS470_5.2.linkerID.LIBRARY" valueType="libs">
 									<listOptionValue builtIn="false" value="&quot;libc.a&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${ORG_PROJ_DIR}/../config/lib_linker.cmd&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${BLE_SDK_PATH}/blelib/host/host_pxxx_sc.a&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${BLE_SDK_PATH}/blelib/hci_tl/cc26xx/cc26xx_hci_tl_none.a&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${BLE_SDK_PATH}/blelib/ctrl/cc2640/cc2640_ctrl_pxxx_sc.a&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${SRC_BLE_CORE}/rom/enc_lib/cc26xx_ecc_rom_api.a&quot;"/>
+									<listOptionValue builtIn="false" value="${ORG_PROJ_DIR}/../config/lib_linker.cmd"/>
 									<listOptionValue builtIn="false" value="&quot;${ROM}/ble_rom_releases/04242014/ble_rom_patch.symbols&quot;"/>
-									<listOptionValue builtIn="false" value="&quot;${CC26XXWARE}/driverlib/bin/ccs/driverlib.lib&quot;"/>
+									<listOptionValue builtIn="false" value="${CC26XXWARE}/driverlib/bin/ccs/driverlib.lib"/>
 								</option>
 								<option id="com.ti.ccstudio.buildDefinitions.TMS470_5.2.linkerID.SEARCH_PATH.299498767" name="Add &lt;dir&gt; to library search path (--search_path, -i)" superClass="com.ti.ccstudio.buildDefinitions.TMS470_5.2.linkerID.SEARCH_PATH" valueType="libPaths">
 									<listOptionValue builtIn="false" value="${CG_TOOL_ROOT}/lib"/>

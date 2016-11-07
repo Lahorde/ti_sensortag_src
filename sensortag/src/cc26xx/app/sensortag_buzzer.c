@@ -40,8 +40,8 @@
  EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
  ******************************************************************************
- Release Name: ble_sdk_2_02_00_31
- Release Date: 2016-06-16 18:57:29
+ Release Name: ble_sdk_2_02_01_18
+ Release Date: 2016-10-26 15:20:04
  *****************************************************************************/
 
 #ifndef EXCLUDE_IO
@@ -57,7 +57,7 @@
 // Temporary PWM solution directly on DriverLib
 // (until a Timer RTOS driver is in place)
 #include <ti/drivers/pin/PINCC26XX.h>
-#include <driverlib/timer.h>
+#include <driverLib/timer.h>
 
 #include "sensortag_buzzer.h"
 

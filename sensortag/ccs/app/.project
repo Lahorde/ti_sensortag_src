@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <projectDescription>
-	<name>sensortag_cc2650stk_app_base</name>
+	<name>sensortag_cc2650stk_app</name>
 	<comment></comment>
 	<projects>
 	</projects>
@@ -248,6 +248,11 @@
 		</link>
 		<link>
 			<name>Drivers/SPI</name>
+			<type>2</type>
+			<locationURI>virtual:/virtual</locationURI>
+		</link>
+		<link>
+			<name>Drivers/TRNG</name>
 			<type>2</type>
 			<locationURI>virtual:/virtual</locationURI>
 		</link>
@@ -617,14 +622,14 @@
 			<locationURI>TI_RTOS_DRIVERS_BASE/ti/drivers/pin/PINCC26XX.h</locationURI>
 		</link>
 		<link>
-			<name>Drivers/RF/RF.c</name>
-			<type>1</type>
-			<locationURI>TI_RTOS_DRIVERS_BASE/ti/drivers/rf/RF.c</locationURI>
-		</link>
-		<link>
 			<name>Drivers/RF/RF.h</name>
 			<type>1</type>
 			<locationURI>TI_RTOS_DRIVERS_BASE/ti/drivers/rf/RF.h</locationURI>
+		</link>
+		<link>
+			<name>Drivers/RF/RFCC26XX_singleMode.c</name>
+			<type>1</type>
+			<locationURI>TI_RTOS_DRIVERS_BASE/ti/drivers/rf/RFCC26XX_singleMode.c</locationURI>
 		</link>
 		<link>
 			<name>Drivers/SPI/SPI.c</name>
@@ -645,6 +650,16 @@
 			<name>Drivers/SPI/SPICC26XXDMA.h</name>
 			<type>1</type>
 			<locationURI>TI_RTOS_DRIVERS_BASE/ti/drivers/spi/SPICC26XXDMA.h</locationURI>
+		</link>
+		<link>
+			<name>Drivers/TRNG/TRNGCC26XX.c</name>
+			<type>1</type>
+			<locationURI>SRC_COMMON/hal/src/target/_common/TRNGCC26XX.c</locationURI>
+		</link>
+		<link>
+			<name>Drivers/TRNG/TRNGCC26XX.h</name>
+			<type>1</type>
+			<locationURI>SRC_COMMON/hal/src/target/_common/TRNGCC26XX.h</locationURI>
 		</link>
 		<link>
 			<name>Drivers/UDMA/UDMACC26XX.c</name>
@@ -750,11 +765,11 @@
 	<variableList>
 		<variable>
 			<name>BLE_SDK_PATH</name>
-			<value>file:/home/remi/.wine_installs/win64/drive_c/ti/simplelink/ble_sdk_2_02_00_31</value>
+			<value>file:/home/data/remi/.wine_installs/win64/drive_c/ti/simplelink/ble_sdk_2_02_01_18</value>
 		</variable>
 		<variable>
 			<name>CC26XXWARE</name>
-			<value>$%7BTI_RTOS_LOC%7D/products/cc26xxware_2_23_03_17162</value>
+			<value>file:/home/remi/.wine_installs/win64/drive_c/ti/tirtos_cc13xx_cc26xx_2_20_01_08/products/cc26xxware_2_24_02_17393</value>
 		</variable>
 		<variable>
 			<name>ORG_PROJ_DIR</name>
@@ -778,11 +793,11 @@
 		</variable>
 		<variable>
 			<name>TI_RTOS_DRIVERS_BASE</name>
-			<value>$%7BTI_RTOS_LOC%7D/products/tidrivers_cc13xx_cc26xx_2_16_01_13/packages</value>
+			<value>$%7BTI_RTOS_LOC%7D/products/tidrivers_cc13xx_cc26xx_2_20_01_10/packages</value>
 		</variable>
 		<variable>
 			<name>TI_RTOS_LOC</name>
-			<value>file:/home/remi/.wine_installs/win64/drive_c/ti/tirtos_cc13xx_cc26xx_2_18_00_03</value>
+			<value>file:/home/data/remi/.wine_installs/win64/drive_c/ti/tirtos_cc13xx_cc26xx_2_20_01_08</value>
 		</variable>
 		<variable>
 			<name>TOOLS_BLE</name>

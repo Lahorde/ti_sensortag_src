@@ -40,8 +40,8 @@
  EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
  ******************************************************************************
- Release Name: ble_sdk_2_02_00_31
- Release Date: 2016-06-16 18:57:29
+ Release Name: ble_sdk_2_02_01_18
+ Release Date: 2016-10-26 15:20:04
  *****************************************************************************/
 
 
@@ -267,9 +267,6 @@ static uint8_t advertData[] =
   0x00                                    // Key state
 };
 
-// GAP GATT Attributes
-static const uint8_t attDeviceName[GAP_DEVICE_NAME_LEN] = "LaunchPad 1.0";
-
 // Device information parameters
 #ifdef CC1350_LAUNCHXL
 static const uint8_t devInfoModelNumber[] = "CC1350 LaunchPad";
@@ -279,7 +276,10 @@ static const uint8_t devInfoModelNumber[] = "CC2650 LaunchPad";
 static const uint8_t devInfoNA[] =          "N.A.";
 static const uint8_t devInfoFirmwareRev[] = FW_VERSION_STR;
 static const uint8_t devInfoMfrName[] =     "Texas Instruments";
-static const uint8_t devInfoHardwareRev[] = "PCB 1.1";
+static const uint8_t *devInfoHardwareRev =  devInfoNA;
+
+// GAP GATT Attributes
+static const uint8_t *attDeviceName = devInfoModelNumber;
 
 // Pins that are actively used by the application
 static PIN_Config SensortagAppPinTable[] =
@@ -520,7 +520,6 @@ static void SensorTag_init(void)
   SensorTagKeys_init();                           // Simple Keys
   SensorTagIO_init();                             // IO (LED+buzzer+self test)
   SensorTagRegister_init();                       // Register Service
-  SensorTagDisplay_init();                        // Display service DevPack LCD
   SensorTagOad_init();                            // Over the Air Download
 
   // Booster Pack devices

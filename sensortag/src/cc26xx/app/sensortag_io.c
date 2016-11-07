@@ -41,8 +41,8 @@
  EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
  ******************************************************************************
- Release Name: ble_sdk_2_02_00_31
- Release Date: 2016-06-16 18:57:29
+ Release Name: ble_sdk_2_02_01_18
+ Release Date: 2016-10-26 15:20:04
  *****************************************************************************/
 
 #ifndef EXCLUDE_IO
@@ -58,7 +58,7 @@
 
 #include <ti/sysbios/knl/Semaphore.h>
 
-#include "Board.h"
+#include "board.h"
 #include "peripheral.h"
 #include "util.h"
 #include "SensorMpu9250.h"
@@ -173,7 +173,9 @@ void SensorTagIO_processCharChangeEvt(uint8_t paramID)
       Io_setParameter(SENSOR_DATA, 1, &ioValue);
 
       PIN_setOutputValue(hGpioPin, IOID_RED_LED, Board_LED_OFF);
+#ifdef IOID_GREEN_LED
       PIN_setOutputValue(hGpioPin, IOID_GREEN_LED, Board_LED_OFF);
+#endif
 #ifdef Board_BUZZER
       SensorTagBuzzer_close();
 #endif
@@ -197,7 +199,7 @@ void SensorTagIO_processCharChangeEvt(uint8_t paramID)
     {
       PIN_setOutputValue(hGpioPin, IOID_RED_LED, Board_LED_OFF);
     }
-
+#ifdef IOID_GREEN_LED
     if (!!(ioValue & IO_DATA_LED2))
     {
       PIN_setOutputValue(hGpioPin, IOID_GREEN_LED, Board_LED_ON);
@@ -206,6 +208,8 @@ void SensorTagIO_processCharChangeEvt(uint8_t paramID)
     {
       PIN_setOutputValue(hGpioPin, IOID_GREEN_LED, Board_LED_OFF);
     }
+#endif
+
 #ifdef Board_BUZZER
     if (!!((ioValue & IO_DATA_BUZZER)))
     {
@@ -244,7 +248,10 @@ void SensorTagIO_reset(void)
 
   // Normal mode; make sure LEDs and buzzer are off
   PIN_setOutputValue(hGpioPin, IOID_RED_LED, Board_LED_OFF);
+#ifdef IOID_GREEN_LED
   PIN_setOutputValue(hGpioPin, IOID_GREEN_LED, Board_LED_OFF);
+#endif
+
 #ifdef BOARD_Buzzer
   SensorTagBuzzer_close();
 #endif

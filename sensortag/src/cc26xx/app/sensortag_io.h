@@ -41,8 +41,8 @@
  EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
  ******************************************************************************
- Release Name: ble_sdk_2_02_00_31
- Release Date: 2016-06-16 18:57:29
+ Release Name: ble_sdk_2_02_01_18
+ Release Date: 2016-10-26 15:20:04
  *****************************************************************************/
 
 #ifndef SENSORTAG_IO_H
@@ -69,13 +69,16 @@ extern "C"
 #define IOID_RED_LED            Board_RLED
 #endif
 
-#if defined(__CC2650STK_SENSORTAG_BOARD_H__) \
-        || defined(__CC1350STK_SENSORTAG_BOARD_H__)
+#if defined(__CC2650STK_SENSORTAG_BOARD_H__)
 #define IOID_GREEN_LED          Board_STK_LED2
 #define IOID_RED_LED            Board_STK_LED1
 #endif
 
-/*********************************************************************
+#if defined(__CC1350STK_SENSORTAG_BOARD_H__)
+#define IOID_RED_LED            Board_STK_LED1
+#endif
+
+            /*********************************************************************
  * MACROS
  */
 

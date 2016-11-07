@@ -41,8 +41,8 @@
  EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
  ******************************************************************************
- Release Name: ble_sdk_2_02_00_31
- Release Date: 2016-06-16 18:57:29
+ Release Name: ble_sdk_2_02_01_18
+ Release Date: 2016-10-26 15:20:04
  *****************************************************************************/
 
 #ifndef SENSORTAG_REVISION_H
@@ -60,16 +60,18 @@ extern "C"
 /*********************************************************************
  * CONSTANTS
  */
-#ifndef FW_VERSION
-#define FW_VERSION	1.30
+#if defined (CC1350_LAUNCHXL) | defined (CC2650_LAUNCHXL)
+#define FW_VERSION	1.20
+#elif defined (CC1350STK) | defined (CC2650STK)
+#define FW_VERSION	1.40
 #endif
 
- /*********************************************************************
+/*********************************************************************
  * MACROS
  */
 #define FW_VERSION_STR TOSTRING(FW_VERSION)" ("__DATE__")"
 
- /*********************************************************************
+/*********************************************************************
  * VARIABLES
  */
 

@@ -26,7 +26,7 @@
 								<listOptionValue builtIn="false" value="RUNTIME_SUPPORT_LIBRARY=&quot;libc.a&quot;"/>
 								<listOptionValue builtIn="false" value="RTSC_MBS_VERSION=2.2.0"/>
 								<listOptionValue builtIn="false" value="XDC_VERSION=3.32.0.06_core"/>
-								<listOptionValue builtIn="false" value="RTSC_PRODUCTS=com.ti.rtsc.TIRTOSCC13XX_CC26XX:2.18.00.03;"/>
+								<listOptionValue builtIn="false" value="RTSC_PRODUCTS=com.ti.rtsc.TIRTOSCC13XX_CC26XX:2.20.01.08;"/>
 								<listOptionValue builtIn="false" value="INACTIVE_REPOS="/>
 								<listOptionValue builtIn="false" value="EXPANDED_REPOS="/>
 								<listOptionValue builtIn="false" value="LINK_ORDER=TOOLS/ccs_linker_defines.cmd;TOOLS/cc26xx_app_oad.cmd;"/>
@@ -42,7 +42,6 @@
 								<option id="com.ti.ccstudio.buildDefinitions.TMS470_5.2.compilerID.LITTLE_ENDIAN.892436228" name="Little endian code [See 'General' page to edit] (--little_endian, -me)" superClass="com.ti.ccstudio.buildDefinitions.TMS470_5.2.compilerID.LITTLE_ENDIAN" value="true" valueType="boolean"/>
 								<option id="com.ti.ccstudio.buildDefinitions.TMS470_5.2.compilerID.INCLUDE_PATH.619385591" name="Add dir to #include search path (--include_path, -I)" superClass="com.ti.ccstudio.buildDefinitions.TMS470_5.2.compilerID.INCLUDE_PATH" valueType="includePath">
 									<listOptionValue builtIn="false" value="${CG_TOOL_ROOT}/include"/>
-									<listOptionValue builtIn="false" value="${SRC_BLE_CORE}/missing_headers"/>
 									<listOptionValue builtIn="false" value="&quot;${SRC_EX}/missing_headers&quot;"/>
 									<listOptionValue builtIn="false" value="${SRC_EX}/cc26xx/app"/>
 									<listOptionValue builtIn="false" value="${SRC_BLE_CORE}/controller/cc26xx/inc"/>
@@ -69,27 +68,26 @@
 									<listOptionValue builtIn="false" value="${SRC_COMMON}/services/src/saddr"/>
 									<listOptionValue builtIn="false" value="${SRC_COMMON}/services/src/sdata"/>
 									<listOptionValue builtIn="false" value="${CC26XXWARE}"/>
-									<listOptionValue builtIn="false" value="${TI_RTOS_DRIVERS_BASE}"/>
 									<listOptionValue builtIn="false" value="${TI_RTOS_DRIVERS_BASE}/ti/mw/extflash"/>
 									<listOptionValue builtIn="false" value="${TI_RTOS_DRIVERS_BASE}/ti/mw/sensors"/>
 									<listOptionValue builtIn="false" value="${TI_RTOS_DRIVERS_BASE}/ti/mw/sensortag"/>
 								</option>
 								<option id="com.ti.ccstudio.buildDefinitions.TMS470_5.2.compilerID.C_DIALECT.762135588" name="C Dialect" superClass="com.ti.ccstudio.buildDefinitions.TMS470_5.2.compilerID.C_DIALECT" value="com.ti.ccstudio.buildDefinitions.TMS470_5.2.compilerID.C_DIALECT.C99" valueType="enumerated"/>
 								<option id="com.ti.ccstudio.buildDefinitions.TMS470_5.2.compilerID.DEFINE.602109509" name="Pre-define NAME (--define, -D)" superClass="com.ti.ccstudio.buildDefinitions.TMS470_5.2.compilerID.DEFINE" valueType="definedSymbols">
-									<listOptionValue builtIn="false" value="POWER_SAVING"/>
-									<listOptionValue builtIn="false" value="EXCLUDE_AUDIO"/>
-									<listOptionValue builtIn="false" value="GATT_TI_UUID_128_BIT"/>
-									<listOptionValue builtIn="false" value="FEATURE_OAD"/>
-									<listOptionValue builtIn="false" value="USE_ICALL"/>
-									<listOptionValue builtIn="false" value="GAPROLE_TASK_STACK_SIZE=640"/>
-									<listOptionValue builtIn="false" value="HEAPMGR_SIZE=0"/>
-									<listOptionValue builtIn="false" value="ICALL_MAX_NUM_TASKS=8"/>
-									<listOptionValue builtIn="false" value="ICALL_MAX_NUM_ENTITIES=11"/>
-									<listOptionValue builtIn="false" value="xdc_runtime_Assert_DISABLE_ALL"/>
-									<listOptionValue builtIn="false" value="xdc_runtime_Log_DISABLE_ALL"/>
 									<listOptionValue builtIn="false" value="CC2650STK"/>
 									<listOptionValue builtIn="false" value="CC26XX"/>
 									<listOptionValue builtIn="false" value="Display_DISABLE_ALL"/>
+									<listOptionValue builtIn="false" value="EXCLUDE_AUDIO"/>
+									<listOptionValue builtIn="false" value="FACTORY_IMAGE"/>
+									<listOptionValue builtIn="false" value="FEATURE_OAD"/>
+									<listOptionValue builtIn="false" value="GATT_TI_UUID_128_BIT"/>
+									<listOptionValue builtIn="false" value="HEAPMGR_SIZE=0"/>
+									<listOptionValue builtIn="false" value="ICALL_MAX_NUM_ENTITIES=11"/>
+									<listOptionValue builtIn="false" value="ICALL_MAX_NUM_TASKS=8"/>
+									<listOptionValue builtIn="false" value="POWER_SAVING"/>
+									<listOptionValue builtIn="false" value="USE_ICALL"/>
+									<listOptionValue builtIn="false" value="xdc_runtime_Assert_DISABLE_ALL"/>
+									<listOptionValue builtIn="false" value="xdc_runtime_Log_DISABLE_ALL"/>
 								</option>
 								<option id="com.ti.ccstudio.buildDefinitions.TMS470_5.2.compilerID.DIAG_WARNING.817343718" name="Treat diagnostic &lt;id&gt; as warning (--diag_warning, -pdsw)" superClass="com.ti.ccstudio.buildDefinitions.TMS470_5.2.compilerID.DIAG_WARNING" valueType="stringList">
 									<listOptionValue builtIn="false" value="225"/>
@@ -105,8 +103,8 @@
 									<listOptionValue builtIn="false" value="${ORG_PROJ_DIR}/../stack/build_config.opt"/>
 									<listOptionValue builtIn="false" value="${ORG_PROJ_DIR}/../config/ccs_compiler_defines.bcfg"/>
 								</option>
-								<option id="com.ti.ccstudio.buildDefinitions.TMS470_5.2.compilerID.OPT_FOR_SPEED.931724009" name="Speed vs. size trade-offs (--opt_for_speed, -mf)" superClass="com.ti.ccstudio.buildDefinitions.TMS470_5.2.compilerID.OPT_FOR_SPEED" value="com.ti.ccstudio.buildDefinitions.TMS470_5.2.compilerID.OPT_FOR_SPEED._none" valueType="enumerated"/>
-								<option id="com.ti.ccstudio.buildDefinitions.TMS470_5.2.compilerID.OPT_LEVEL.182654558" name="Optimization level (--opt_level, -O)" superClass="com.ti.ccstudio.buildDefinitions.TMS470_5.2.compilerID.OPT_LEVEL" value="com.ti.ccstudio.buildDefinitions.TMS470_5.2.compilerID.OPT_LEVEL.3" valueType="enumerated"/>
+								<option id="com.ti.ccstudio.buildDefinitions.TMS470_5.2.compilerID.OPT_FOR_SPEED.931724009" name="Speed vs. size trade-offs (--opt_for_speed, -mf)" superClass="com.ti.ccstudio.buildDefinitions.TMS470_5.2.compilerID.OPT_FOR_SPEED" value="com.ti.ccstudio.buildDefinitions.TMS470_5.2.compilerID.OPT_FOR_SPEED.0" valueType="enumerated"/>
+								<option id="com.ti.ccstudio.buildDefinitions.TMS470_5.2.compilerID.OPT_LEVEL.182654558" name="Optimization level (--opt_level, -O)" superClass="com.ti.ccstudio.buildDefinitions.TMS470_5.2.compilerID.OPT_LEVEL" value="com.ti.ccstudio.buildDefinitions.TMS470_5.2.compilerID.OPT_LEVEL.4" valueType="enumerated"/>
 								<inputType id="com.ti.ccstudio.buildDefinitions.TMS470_5.2.compiler.inputType__C_SRCS.1902494323" name="C Sources" superClass="com.ti.ccstudio.buildDefinitions.TMS470_5.2.compiler.inputType__C_SRCS"/>
 								<inputType id="com.ti.ccstudio.buildDefinitions.TMS470_5.2.compiler.inputType__CPP_SRCS.1167655000" name="C++ Sources" superClass="com.ti.ccstudio.buildDefinitions.TMS470_5.2.compiler.inputType__CPP_SRCS"/>
 								<inputType id="com.ti.ccstudio.buildDefinitions.TMS470_5.2.compiler.inputType__ASM_SRCS.1892213022" name="Assembly Sources" superClass="com.ti.ccstudio.buildDefinitions.TMS470_5.2.compiler.inputType__ASM_SRCS"/>
@@ -188,7 +186,7 @@
 								<listOptionValue builtIn="false" value="RUNTIME_SUPPORT_LIBRARY=&quot;libc.a&quot;"/>
 								<listOptionValue builtIn="false" value="RTSC_MBS_VERSION=2.2.0"/>
 								<listOptionValue builtIn="false" value="XDC_VERSION=3.32.0.06_core"/>
-								<listOptionValue builtIn="false" value="RTSC_PRODUCTS=com.ti.rtsc.TIRTOSCC13XX_CC26XX:2.18.00.03;"/>
+								<listOptionValue builtIn="false" value="RTSC_PRODUCTS=com.ti.rtsc.TIRTOSCC13XX_CC26XX:2.20.01.08;"/>
 								<listOptionValue builtIn="false" value="INACTIVE_REPOS="/>
 								<listOptionValue builtIn="false" value="EXPANDED_REPOS="/>
 								<listOptionValue builtIn="false" value="LINK_ORDER=TOOLS/ccs_linker_defines.cmd;TOOLS/cc26xx_app.cmd;"/>
@@ -230,28 +228,26 @@
 									<listOptionValue builtIn="false" value="${SRC_COMMON}/services/src/saddr"/>
 									<listOptionValue builtIn="false" value="${SRC_COMMON}/services/src/sdata"/>
 									<listOptionValue builtIn="false" value="${CC26XXWARE}"/>
-									<listOptionValue builtIn="false" value="${TI_RTOS_DRIVERS_BASE}"/>
 									<listOptionValue builtIn="false" value="${TI_RTOS_DRIVERS_BASE}/ti/mw/extflash"/>
 									<listOptionValue builtIn="false" value="${TI_RTOS_DRIVERS_BASE}/ti/mw/sensors"/>
 									<listOptionValue builtIn="false" value="${TI_RTOS_DRIVERS_BASE}/ti/mw/sensortag"/>
 								</option>
 								<option id="com.ti.ccstudio.buildDefinitions.TMS470_5.2.compilerID.C_DIALECT.1618799296" name="C Dialect" superClass="com.ti.ccstudio.buildDefinitions.TMS470_5.2.compilerID.C_DIALECT" value="com.ti.ccstudio.buildDefinitions.TMS470_5.2.compilerID.C_DIALECT.C99" valueType="enumerated"/>
 								<option id="com.ti.ccstudio.buildDefinitions.TMS470_5.2.compilerID.DEFINE.38195770" name="Pre-define NAME (--define, -D)" superClass="com.ti.ccstudio.buildDefinitions.TMS470_5.2.compilerID.DEFINE" valueType="definedSymbols">
-									<listOptionValue builtIn="false" value="POWER_SAVING"/>
-									<listOptionValue builtIn="false" value="EXCLUDE_OAD"/>
-									<listOptionValue builtIn="false" value="EXCLUDE_AUDIO"/>
-									<listOptionValue builtIn="false" value="EXCLUDE_FACTORY_RESET"/>
-									<listOptionValue builtIn="false" value="GATT_TI_UUID_128_BIT"/>
-									<listOptionValue builtIn="false" value="USE_ICALL"/>
-									<listOptionValue builtIn="false" value="GAPROLE_TASK_STACK_SIZE=640"/>
-									<listOptionValue builtIn="false" value="HEAPMGR_SIZE=0"/>
-									<listOptionValue builtIn="false" value="ICALL_MAX_NUM_TASKS=8"/>
-									<listOptionValue builtIn="false" value="ICALL_MAX_NUM_ENTITIES=11"/>
-									<listOptionValue builtIn="false" value="xdc_runtime_Assert_DISABLE_ALL"/>
-									<listOptionValue builtIn="false" value="xdc_runtime_Log_DISABLE_ALL"/>
 									<listOptionValue builtIn="false" value="CC2650STK"/>
 									<listOptionValue builtIn="false" value="CC26XX"/>
 									<listOptionValue builtIn="false" value="Display_DISABLE_ALL"/>
+									<listOptionValue builtIn="false" value="EXCLUDE_AUDIO"/>
+									<listOptionValue builtIn="false" value="EXCLUDE_FACTORY_RESET"/>
+									<listOptionValue builtIn="false" value="EXCLUDE_OAD"/>
+									<listOptionValue builtIn="false" value="GATT_TI_UUID_128_BIT"/>
+									<listOptionValue builtIn="false" value="HEAPMGR_SIZE=0"/>
+									<listOptionValue builtIn="false" value="ICALL_MAX_NUM_ENTITIES=11"/>
+									<listOptionValue builtIn="false" value="ICALL_MAX_NUM_TASKS=8"/>
+									<listOptionValue builtIn="false" value="POWER_SAVING"/>
+									<listOptionValue builtIn="false" value="USE_ICALL"/>
+									<listOptionValue builtIn="false" value="xdc_runtime_Assert_DISABLE_ALL"/>
+									<listOptionValue builtIn="false" value="xdc_runtime_Log_DISABLE_ALL"/>
 								</option>
 								<option id="com.ti.ccstudio.buildDefinitions.TMS470_5.2.compilerID.DIAG_WARNING.927837539" name="Treat diagnostic &lt;id&gt; as warning (--diag_warning, -pdsw)" superClass="com.ti.ccstudio.buildDefinitions.TMS470_5.2.compilerID.DIAG_WARNING" valueType="stringList">
 									<listOptionValue builtIn="false" value="225"/>
@@ -267,6 +263,8 @@
 									<listOptionValue builtIn="false" value="${ORG_PROJ_DIR}/../stack/build_config.opt"/>
 									<listOptionValue builtIn="false" value="${ORG_PROJ_DIR}/../config/ccs_compiler_defines.bcfg"/>
 								</option>
+								<option id="com.ti.ccstudio.buildDefinitions.TMS470_5.2.compilerID.OPT_FOR_SPEED.676917787" name="Speed vs. size trade-offs (--opt_for_speed, -mf)" superClass="com.ti.ccstudio.buildDefinitions.TMS470_5.2.compilerID.OPT_FOR_SPEED" value="com.ti.ccstudio.buildDefinitions.TMS470_5.2.compilerID.OPT_FOR_SPEED.0" valueType="enumerated"/>
+								<option id="com.ti.ccstudio.buildDefinitions.TMS470_5.2.compilerID.OPT_LEVEL.1569439459" name="Optimization level (--opt_level, -O)" superClass="com.ti.ccstudio.buildDefinitions.TMS470_5.2.compilerID.OPT_LEVEL" value="com.ti.ccstudio.buildDefinitions.TMS470_5.2.compilerID.OPT_LEVEL.4" valueType="enumerated"/>
 								<inputType id="com.ti.ccstudio.buildDefinitions.TMS470_5.2.compiler.inputType__C_SRCS.1640501545" name="C Sources" superClass="com.ti.ccstudio.buildDefinitions.TMS470_5.2.compiler.inputType__C_SRCS"/>
 								<inputType id="com.ti.ccstudio.buildDefinitions.TMS470_5.2.compiler.inputType__CPP_SRCS.585312296" name="C++ Sources" superClass="com.ti.ccstudio.buildDefinitions.TMS470_5.2.compiler.inputType__CPP_SRCS"/>
 								<inputType id="com.ti.ccstudio.buildDefinitions.TMS470_5.2.compiler.inputType__ASM_SRCS.1143738741" name="Assembly Sources" superClass="com.ti.ccstudio.buildDefinitions.TMS470_5.2.compiler.inputType__ASM_SRCS"/>
