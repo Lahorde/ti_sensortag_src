@@ -204,7 +204,6 @@
 								<option id="com.ti.ccstudio.buildDefinitions.TMS470_5.2.compilerID.LITTLE_ENDIAN.1939725149" name="Little endian code [See 'General' page to edit] (--little_endian, -me)" superClass="com.ti.ccstudio.buildDefinitions.TMS470_5.2.compilerID.LITTLE_ENDIAN" value="true" valueType="boolean"/>
 								<option id="com.ti.ccstudio.buildDefinitions.TMS470_5.2.compilerID.INCLUDE_PATH.11154816" name="Add dir to #include search path (--include_path, -I)" superClass="com.ti.ccstudio.buildDefinitions.TMS470_5.2.compilerID.INCLUDE_PATH" valueType="includePath">
 									<listOptionValue builtIn="false" value="${CG_TOOL_ROOT}/include"/>
-									<listOptionValue builtIn="false" value="${SRC_BLE_CORE}/missing_headers"/>
 									<listOptionValue builtIn="false" value="&quot;${SRC_EX}/missing_headers&quot;"/>
 									<listOptionValue builtIn="false" value="${SRC_EX}/cc26xx/app"/>
 									<listOptionValue builtIn="false" value="${SRC_BLE_CORE}/controller/cc26xx/inc"/>

@@ -37,6 +37,7 @@
 								<option id="com.ti.ccstudio.buildDefinitions.TMS470_5.2.compilerID.OPT_FOR_SPEED.1164526369" name="Speed vs. size trade-offs (--opt_for_speed, -mf)" superClass="com.ti.ccstudio.buildDefinitions.TMS470_5.2.compilerID.OPT_FOR_SPEED" value="com.ti.ccstudio.buildDefinitions.TMS470_5.2.compilerID.OPT_FOR_SPEED.0" valueType="enumerated"/>
 								<option id="com.ti.ccstudio.buildDefinitions.TMS470_5.2.compilerID.INCLUDE_PATH.255364528" name="Add dir to #include search path (--include_path, -I)" superClass="com.ti.ccstudio.buildDefinitions.TMS470_5.2.compilerID.INCLUDE_PATH" valueType="includePath">
 									<listOptionValue builtIn="false" value="${CG_TOOL_ROOT}/include"/>
+									<listOptionValue builtIn="false" value="&quot;${PROJECT_LOC}/../../src/missing_headers&quot;"/>
 									<listOptionValue builtIn="false" value="${SRC_EX}/examples/sensortag/cc26xx/stack"/>
 									<listOptionValue builtIn="false" value="${SRC_EX}/inc"/>
 									<listOptionValue builtIn="false" value="${SRC_EX}/common/cc26xx"/>
@@ -51,7 +52,6 @@
 									<listOptionValue builtIn="false" value="${SRC_COMMON}/services/src/nv"/>
 									<listOptionValue builtIn="false" value="${SRC_COMMON}/icall/src/inc"/>
 									<listOptionValue builtIn="false" value="${SRC_BLE_CORE}/inc"/>
-									<listOptionValue builtIn="false" value="&quot;${SRC_BLE_CORE}/missing_headers&quot;"/>
 									<listOptionValue builtIn="false" value="${SRC_BLE_CORE}/controller/cc26xx/inc"/>
 									<listOptionValue builtIn="false" value="${SRC_COMMON}/services/src/aes/cc26xx"/>
 									<listOptionValue builtIn="false" value="${SRC_COMMON}/npi/src"/>
